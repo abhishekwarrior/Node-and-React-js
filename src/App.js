@@ -20,6 +20,7 @@ import Unmount from './Unmount';
 import UseEffectMount from './useEffectMount';
 import UseEffectUpdate from './UseEffectUpdate';
 import UseEffectWithDependence from './UseEffectWithDependence';
+import UseEffectUnmount from './UseEffectUnmount';
 
 function App() {
   let [isvisible,setIsVisible]=useState(true);
@@ -57,6 +58,8 @@ function App() {
     {/* <UseEffectMount></UseEffectMount>
     <UseEffectUpdate></UseEffectUpdate> */}
     <UseEffectWithDependence></UseEffectWithDependence>
+    {isvisible?<UseEffectUnmount></UseEffectUnmount>:null}
+    <button onClick={()=>{setIsVisible(!isvisible)}}>update isvisible</button>
    </div>
   );
 }
